@@ -1,0 +1,209 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+html {
+  cursor: url(../img/cursor-auto.svg) 16 16, auto;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+a {
+  cursor: none;
+  &:hover {
+    cursor: none;
+  }
+}
+
+#cursor {
+  transition: opacity .25s;
+  opacity: 0;
+  position: absolute;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none !important;
+  outline: none;
+}
+
+.left, .right {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8rem;
+  height: 100%;
+  z-index: 100;
+}
+
+.left {
+  background: blue;
+  left: 0;
+  top: 0;
+  &:hover {
+    cursor: url(../img/cursor-left.svg) 16 16, auto;
+  }
+}
+
+.right {
+  background: red;
+  right: 0;
+  top: 0;
+  &:hover {
+    cursor: url(../img/cursor-right.svg) 16 16, auto;
+  }
+}
+
+.project {
+  background: #e4e4e4;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    cursor: url(../img/cursor-dot.svg) 16 16, auto;
+  }
+  div {
+    height: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none !important;
+    outline: none;
+  }
+}
+
+.columns {
+  padding: 0;
+}
+
+.slides {
+  z-index: 1;
+}
+
+.slick-slider {
+  margin-bottom: 0;
+}
+
+// Projects
+.project-1 {
+  .slide-1 {
+    background: url("../img/project-1/1.png");
+    background-size: 100%;
+  }
+  .slide-2 {
+    background: #000;
+    color: #fff;
+  }
+  .slide-3 {
+
+  }
+  .left, .right {
+    opacity: 0;
+  }
+}
+
+// Medium screens
+@media only screen and (min-width: 40.063em) {
+  .project-1 {
+    margin: 0 3.4rem 0 1rem;
+    height: 24rem;
+  }
+  .project-2 {
+    margin: 6rem 0 3.4rem 0;
+    height: 36rem;
+  }
+  .project-3 {
+    margin: 0 6rem 3.4rem 6rem;
+    height: 20rem;
+  }
+  body {
+    padding-top: 3.4rem;
+  }
+  .mobile-only {
+    display: none;
+  }
+  .about {
+    text-align: center;
+    padding: 4rem 4rem 0 4rem;
+  }
+} /* min-width 641px, medium screens */
+
+// Mobile
+@media only screen and (max-width: 40.063em) {
+  .project {
+    margin: 0.5rem 1rem;
+    overflow: hidden;
+    div {
+      height: 100%;
+    }
+  }
+  #cursor {
+    display: none;
+  }
+  .desktop-only {
+    display: none;
+  }
+  body {
+    padding-top: 0.5rem;
+  }
+  .left, .right {
+    display: none !important;
+  }
+  .project-1 {
+    height: 15rem;
+  }
+  .project-2 {
+    height: 36rem;
+  }
+} /* max-width 641px, medium screens */
