@@ -11,7 +11,10 @@ $(document).ready(function(){
     $('.slides').slick({
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        speed: 400,
+        cssEase: 'ease-out',
+        useTransform: true
     });
 });
 
@@ -22,13 +25,18 @@ var projects = [
         images: 1
     },
     {
+        name: 'solace',
+        htw: 0.769,
+        images: 1
+    },
+    {
         name: 'tsa',
         htw: 1.379,
         images: 1
     },
     {
         name: 'converse-installation',
-        htw: 0.768,
+        htw: 0.6,
         images: 1
     },
     {
@@ -64,27 +72,27 @@ var projects = [
     {
         name: 'nts',
         htw: 0.455,
-        images: 0
+        images: 1
     },
     {
         name: 'sc',
         htw: 1.398,
-        images: 0
+        images: 1
     },
     {
         name: 'prints',
         htw: 1.398,
-        images: 0
+        images: 1
     },
     {
         name: 'sprite',
         htw: 0.607,
-        images: 0
+        images: 1
     },
     {
         name: 'signage',
         htw: 0.448,
-        images: 0
+        images: 1
     }
 ];
 
@@ -94,9 +102,9 @@ for (var i = 0; i < projects.length; i++) {
     $(className).css({
         'height': ($(className).width() * project.htw) + 'px'
     });
-    for (var j = 0; j < project.images; j++) {
-        $(className).find('.slide-' + project.images[j].toString()).css({
-            'background': "url('./img/projects/" + project.name + "/" + project.images[j].toString() + ".png')"
+    for (var j = 0; j <= project.images; j++) {
+        $(className).find('.slide-' + j).css({
+            'background': "url('./img/projects/" + project.name + "/" + j + ".png')"
         })
     }
 }

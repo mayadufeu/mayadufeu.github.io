@@ -5,6 +5,15 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+.project-bowndling {
+  margin: 0 3.4rem 0 1rem; }
+
+.project-tsa {
+  margin: 6rem 0 3.4rem 0; }
+
+.project-solace {
+  margin: 3.4rem 6rem 3.4rem 6rem; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
    * 1. Set default font family to sans-serif.
@@ -4240,7 +4249,9 @@ a {
         user-select: none !important;
     outline: none; }
   .project .slides * {
-    background-size: 100% !important; }
+    background-size: cover !important; }
+  .project .left, .project .right {
+    opacity: 0; }
 
 .columns {
   padding: 0; }
@@ -4251,24 +4262,7 @@ a {
 .slick-slider {
   margin-bottom: 0; }
 
-.project-bowndling .slide-2 {
-  background: #000;
-  color: #fff; }
-
-.project-bowndling .slide-3 {
-  background: olive; }
-
-.project-bowndling .left, .project-bowndling .right {
-  opacity: 0; }
-
 @media only screen and (min-width: 40.063em) {
-  .project-bowndling {
-    margin: 0 3.4rem 0 1rem; }
-  .project-tsa {
-    margin: 6rem 0 3.4rem 0; }
-  .project-solace {
-    margin: 0 6rem 3.4rem 6rem;
-    height: 20rem; }
   body {
     padding-top: 3.4rem; }
   .mobile-only {

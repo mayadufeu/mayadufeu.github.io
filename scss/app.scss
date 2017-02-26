@@ -3,6 +3,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+@import 'projects';
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -123,7 +124,10 @@ a {
     outline: none;
   }
   .slides * {
-    background-size: 100% !important;
+    background-size: cover !important;
+  }
+  .left, .right {
+    opacity: 0;
   }
 }
 
@@ -140,34 +144,12 @@ a {
 }
 
 // Projects
-.project-bowndling {
-  .slide-2 {
-    background: #000;
-    color: #fff;
-  }
-  .slide-3 {
-    background: olive;
-  }
-  .left, .right {
-    opacity: 0;
-  }
-}
+
 
 
 // Medium screens
 @media only screen and (min-width: 40.063em) {
-  .project-bowndling {
-    margin: 0 3.4rem 0 1rem;
-    // height determined by jQuery
-  }
-  .project-tsa {
-    margin: 6rem 0 3.4rem 0;
-    // height: 36rem;
-  }
-  .project-solace {
-    margin: 0 6rem 3.4rem 6rem;
-    height: 20rem;
-  }
+
   body {
     padding-top: 3.4rem;
   }
